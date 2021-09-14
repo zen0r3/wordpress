@@ -14,8 +14,12 @@ echo "Set Database Name: "
 namedb=wpdb
 
 sudo apt-get update
+wait
 sudo apt-get upgrade -y
+wait
+
 sudo apt-get install apache2 apache2-utils -y
+
 sudo ufw allow in "Apache"
 sudo apt-get install mysql-client mysql-server -y
 sudo apt-get install php libapache2-mod-php php-mysql php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip -y
