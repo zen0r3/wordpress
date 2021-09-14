@@ -20,7 +20,7 @@ sudo ufw allow in "Apache"
 sudo apt-get install mysql-client mysql-server -y
 sudo apt-get install php libapache2-mod-php php-mysql php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip -y
 
-echo "<?php 
+sudo echo "<?php 
 phpinfo();
 ?>" > /var/www/html/info.php
 
