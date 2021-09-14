@@ -2,9 +2,6 @@
 
 #NON INTERRACTIVE LOL
 
-
-#!/usr/bin/bash
-
 #set username mysql and password for root
 echo "Set Database Username: "
 usera=LolUserWordpress
