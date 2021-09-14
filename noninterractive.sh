@@ -14,9 +14,8 @@ echo "Set Database Name: "
 namedb=wpdb
 
 sudo apt-get update
-wait
+
 sudo apt-get upgrade -y
-wait
 
 sudo apt-get install apache2 apache2-utils -y
 
