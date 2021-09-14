@@ -1,0 +1,2 @@
+# wordpress
+aws2autoinstall
