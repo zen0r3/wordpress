@@ -3,22 +3,30 @@
 #NON INTERRACTIVE LOL
 
 #set username mysql and password for root
-echo "Set Database Username: "
+echo "Setting Database : "
 usera=LolUserWordpress
-echo "Set Database Password: "
+echo "Setting Database : "
 passworda=passwood12315131
-echo "Set Database Name: "
+echo "Settting Database : "
 namedb=wpdb
 
-sudo apt-get update
+sudo apt update
 
-sudo apt-get upgrade -y
+clear
 
-sudo apt-get install apache2 apache2-utils -y
+sudo apt upgrade -y
+
+clear
+
+sudo apt install apache2 apache2-utils -y
+
+clear
 
 sudo ufw allow in "Apache"
-sudo apt-get install mysql-client mysql-server -y
-sudo apt-get install php libapache2-mod-php php-mysql php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip -y
+sudo apt install mysql-client mysql-server -y
+sudo apt install php libapache2-mod-php php-mysql php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip -y
+
+clear
 
 sudo echo "<?php 
 phpinfo();
@@ -76,15 +84,19 @@ sudo mv php.ini /etc/php/7.4/apache2/
 /etc/init.d/apache2 restart
 /etc/init.d/mysql restart
 
+sudo find /var/www -type d -exec chmod 775 {} \;
+sudo find /var/www -type f -exec chmod 644 {} \;
+
+
 rm -rf wordpress/
 curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 
-chmod +x wp-cli.phar
+sudo chmod +x wp-cli.phar
 sudo mv wp-cli.phar /usr/local/bin/wp
-
-echo "INSTALLATION COMPLETE"
+clear
+echo -e "INSTALLATION COMPLETE\n"
 echo 
 echo The username is $usera password is $passworda  db name is $namedb > credentials.txt
 ip=$(curl -s ifconfig.me)
-echo "Website URL is http://$ip"
-echo "Check PHPInfo here http://$ip/info.php"
+echo -e "Website URL is:\nhttp://$ip"
+echo -e "\nCheck PHPInfo here:\nhttp://$ip/info.php"
