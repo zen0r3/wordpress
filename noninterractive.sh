@@ -3,11 +3,11 @@
 #NON INTERRACTIVE LOL
 
 #set username mysql and password for root
-echo "Setting Database : "
+echo "Set Database Username: "
 usera=LolUserWordpress
-echo "Setting Database : "
+echo "Set Database Password: "
 passworda=passwood12315131
-echo "Settting Database : "
+echo "Set Database Name: "
 namedb=wpdb
 
 sudo apt update
@@ -95,7 +95,6 @@ sudo chmod +x wp-cli.phar
 sudo mv wp-cli.phar /usr/local/bin/wp
 clear
 echo -e "INSTALLATION COMPLETE\n"
-echo 
 echo The username is $usera password is $passworda  db name is $namedb > credentials.txt
 ip=$(curl -s ifconfig.me)
 echo -e "Website URL is:\nhttp://$ip"
